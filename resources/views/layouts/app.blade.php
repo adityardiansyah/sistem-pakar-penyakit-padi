@@ -22,6 +22,20 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <style>
+    .navbar-default{
+        background-color: #2cc198!important;
+    }
+    .navbar-default .navbar-brand{
+        color:#fff;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+    .navbar-default .navbar-nav>li>a{
+        color:#fff;
+        font-size: 12pt;
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -51,11 +65,9 @@
                         @if (Auth::guest())
                             <li><a href="{{ route('penyakit') }}">Penyakit</a></li>
                             <li><a href="{{ route('gejala') }}">Gejala</a></li>
-                            <li><a href="{{ route('tentang') }}">Tentang</a></li>
                         @else
                             <li><a href="{{ route('penyakit.index') }}">Penyakit</a></li>
                             <li><a href="{{ route('gejala.index') }}">Gejala</a></li>
-                            <li><a href="{{ route('tentang') }}">Tentang</a></li>
                         @endif
                     </ul>
 
